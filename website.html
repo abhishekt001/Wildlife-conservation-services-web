@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wildlife Conservation Services</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+
+<script>
+  // JavaScript code
+
+// Function to handle form submission
+function handleSubmit(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get form values
+  var nameInput = document.getElementById("name");
+  var emailInput = document.getElementById("email");
+  var messageInput = document.getElementById("message");
+
+  // Validate form inputs
+  if (nameInput.value === "" || emailInput.value === "" || messageInput.value === "") {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  // Display success message
+  alert("Thank you for your message! We will get back to you soon.");
+
+  // Clear form inputs
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+}
+
+// Add event listener to form submit button
+var submitButton = document.getElementById("submit-btn");
+submitButton.addEventListener("click", handleSubmit);
+
+<form>
+  <input type="text" id="name" placeholder="Your Name"></input>
+  <input type="email" id="email" placeholder="Your Email"></input>
+  <textarea id="message" placeholder="Message"></textarea>
+  <button type="submit" id="submit-btn">Send Message</button>
+</form>
+
+</script>
+
+<body>
+  <header>
+    <h1>Welcome to Wildlife Conservation Services</h1>
+    <ul class="social-links">
+      <li><a href="#facebook"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#instagram"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#twitter"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="far fa-envelope"></i></a></li>
+  </ul>
+
+    <nav>
+      <div class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#animals">Animals</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#donate">Donate</a></li>
+      </ul>
+    </div>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section class="image-section">
+      <div class="image-container">
+        <img src="Wildlife_Conservation 01.jpg" alt="Image 1">
+      </div>
+
+    </section>
+    
+
+    <section class="about" id="about">
+      <div class="line"></div>
+                <div class="content">
+                    <div class="left">
+                       <div class="text">
+                        <h2>About Us</h2>
+                        <p>At Wildlife Conservation Service, we are dedicated to protecting and preserving the magnificent biodiversity of our planet. 
+                        </p>
+
+                        <p>With a deep passion for wildlife and a commitment to environmental stewardship, we strive to make a positive impact on the delicate ecosystems that support countless species. Our team of highly skilled conservationists, biologists, and researchers works tirelessly to conserve endangered species, restore habitats, and promote sustainable practices. 
+                        </p>
+       
+                        <p>Through scientific research, community engagement, and advocacy, we aim to raise awareness about the importance of wildlife conservation and inspire individuals and communities to become active participants in safeguarding our natural heritage.
+                        With a focus on collaboration and innovation, we collaborate with local communities, governments, and organizations worldwide to develop effective strategies and implement impactful projects that ensure a harmonious coexistence between humans and wildlife. Together, let us protect and preserve the extraordinary wonders of our planet for future generations to cherish.
+                        </p>
+                       </div>
+                    </div>
+                     <div class="right">
+                </div>
+        </div>           
+     </section>
+    
+    <section id="animals">
+      <div class="wildanimals"><h1>Wild Animals</h1></div>
+      <div class="animal-card">
+        <h1>Amur leopard</h1>
+        <img src="C:\Users\HP\Desktop\website\amur leopard.jpg" alt="Amur leopard">
+        <p>The Amur leopard (Panthera pardus orientalis) is a leopard subspecies native to the Primorye region of southeastern Russia and northern China. 
+          It is listed as Critically Endangered on the IUCN Red List, as in 2007, only 19–26 wild leopards were estimated to survive in southeastern Russia and northeastern China.
+          As of 2015, fewer than 60 individuals were estimated to survive in Russia and China. </p>
+          <button class="knowmore-btn"><h2>know more</h2></button>
+      </div>
+      <div class="animal-card">
+        <h1>Lion</h1>
+        <img src="C:\Users\HP\Desktop\website\lion.jpg" alt="Lion">
+        <p>The lion (Panthera leo) is a large cat of the genus Panthera native to Africa and India. It has a muscular, broad-chested body; short, rounded head; round ears; and a hairy tuft at the end of its tail. 
+          It is sexually dimorphic; adult male lions are larger than females and have a prominent mane. It is a social species, forming groups called prides.
+          A lion's pride consists of a few adult males, related females, and cubs. Groups of female lions usually hunt together, preying mostly on large ungulates. 
+          The lion is an apex and keystone predator; although some lions scavenge when opportunities occur and have been known to hunt humans, lions typically do not actively seek out and prey on humans.</p>
+          <button class="knowmore-btn"><h2> know more </h2></button>
+        </div>
+
+      <div class="animal-card">
+        <h1>Elephant</h1>
+        <img src="C:\Users\HP\Desktop\website\elephant.jpg" alt="Elephant">
+        <p>Elephants are the largest existing land animals. Three living species are currently recognised: the African bush elephant, the African forest elephant, and the Asian elephant. They are the only surviving members of the family Elephantidae and the order Proboscidea. 
+          The order was formerly much more diverse during the Pleistocene, but most species became extinct during the Late Pleistocene epoch. Distinctive features of elephants include a long proboscis called a trunk, tusks, large ear flaps, pillar-like legs, and tough but sensitive skin. 
+          The trunk is used for breathing and is prehensile, bringing food and water to the mouth, and grasping objects. Tusks, which are derived from the incisor teeth, serve both as weapons and as tools for moving objects and digging.
+           The large ear flaps assist in maintaining a constant body temperature as well as in communication. African elephants have larger ears and concave backs, whereas Asian elephants have smaller ears, and convex or level backs.</p>
+           <button class="knowmore-btn"><h2> know more </h2></button>
+          </div>
+
+      <div class="animal-card">
+        <h1>Tiger</h1>
+        <img src="C:\Users\HP\Desktop\website\tiger.jpg" alt="Tiger">
+        <p>The tiger (Panthera tigris) is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar. 
+          It is territorial and generally a solitary but social predator, requiring large contiguous areas of habitat to support its requirements for prey and rearing of its offspring. 
+          Tiger cubs stay with their mother for about two years and then become independent, leaving their mother's home range to establish their own.</p>
+          <button class="knowmore-btn"><h2> know more </h2></button>
+        </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    
+    <section id="banner">
+      <h2>Protecting Our Wild Friends</h2>
+      <p>Join us in our mission to conserve and protect wildlife and their habitats.</p>
+      <a href="#" class="cta-button">Learn More</a>
+    </section>
+  </main>
+
+
+
+
+
+  <section>
+  <div class="donate" id="donate">
+    <div class="title"><h5>We Need Help!</h5></div>
+    <div class="text"><h3>Show your enthusiasm towards our work by donating us. Your support motivates
+        us to protect the endangered species and help provide them emergency relief.
+      </h3>
+    </div>
+    <div class="amounts">
+        <div class="amount">
+            <input type="radio" id="500" name="1000">
+            <label for="500">500</label>
+        </div>
+        <div class="amount">
+            <input type="radio" id="1000" name="1000">
+            <label for="1000">1000</label>
+        </div>
+        <div class="amount">
+            <input type="radio" id="5000" name="1000">
+            <label for="5000">5000</label>
+        </div>
+        <div class="amount">
+            <input type="radio" id="1000" name="1000">
+            <label for="1000">10000</label>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="donate-btn"><b>Donate</b></button>
+        <button class=" donate-btn custom-amount-btn">Other amount</button>
+    </div>
+</div>
+  </section>
+
+
+
+  <footer>
+    <div class="inner-footer">
+      <div class="socials">
+          <ul>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="far fa-envelope"></i></a></li>
+          </ul>
+      </div>
+
+    
+      <div class="newsletter">
+        Get Weekly Updates From Us
+        <form action="#">
+            <input type="text" placeholder="Enter Your Email Address" class="email-input">
+            <input type="submit" value="Subscribe" class="subscribe-btn">
+        </form>
+    </div>
+
+
+    <p>&copy; 2023 Wildlife Conservation Services. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="sent.js"></script>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+<script src="./static/js/page_scroll_indicator.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script>
+    PageScrollIndicator.createProgressBar("#container");
+</script>
+
+</html>

@@ -1,0 +1,427 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 10;
+  padding: 10;
+  background-color:#7be677;
+
+}
+
+.social-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+
+.social-links i{
+  color: var(--gold);
+  font-size: 1.2em;
+}
+
+.social-links i:hover{
+  color: rgb(249, 243, 243);
+  transition: 0.3s ease;
+}
+
+header {
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.header .mid{
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .mid .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .mid .text{
+  width: 50%;
+  font-size: 3em;
+  font-family: 'Poppins', sans-serif;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #29e458;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav .navbar :hover{
+  color: rgb(43, 226, 19);
+  transition: 0.3s ease;
+ 
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+#banner {
+  background-image: url("forest.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 0;
+  color: #030303;
+  background-color: #e3bdbd;
+}
+
+#banner h2 {
+  margin-top: 10%;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.image-container {
+  margin-top: 10%;
+  width: 370px; /* Adjust the width and height as per your requirements */
+  height: 370px;
+  border-radius: 50%; /* Makes the container circular */
+  border-color: #030303;
+  overflow: hidden; /* Hides the overflowing parts of the image */
+}
+
+.image-container img {
+  width: 100%; /* Makes the image fill the container */
+  height: 95%; /* Maintains the aspect ratio */
+  display: block; /* Removes any extra space below the image */
+}
+
+#about {
+
+  margin: 50px 0;
+  margin-top: 10%;
+  background-image: url();
+  background-size: cover;
+  background-position:center;
+  margin-bottom: 10%;
+}
+
+#about h2 {
+  color: #0d0c0c;
+  font-size: 38px;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+
+.about p {
+font-size: 20px ;
+}
+
+#animals {
+  display: space; 
+  justify-content: space-evenly;
+
+}
+
+.wildanimals {
+  font-size: 26px;
+  margin-bottom: 3%;
+}
+
+.animal-card {
+  margin-bottom: 3%;
+  flex-basis: 50%;
+  padding: 10px;
+  border: 3px solid #c25a5a;
+  border-radius: 4px;
+  background-color: #ffebb7;
+}
+
+.animal-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.animal-card h1 {
+margin-bottom: 2%;
+margin-left: 2%;
+margin-top: 2%;
+}
+
+.animal-card .knowmore-btn{
+  margin-left: 80%;
+  background-color: var(--gold);
+  color: rgb(10, 9, 9);
+  font-family: 'Teko';
+  font-size: 0.8em;
+  padding: 5px 30px;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  margin-right: 1em;
+  background-color: rgb(250, 198, 176);
+  color: var(--dark-gray);
+}
+
+.knowmore-btn:hover{
+  background: rgb(40, 230, 93);
+}
+
+#contact {
+
+  margin-top: 40px;
+  width: 100%;
+
+}
+
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  margin-bottom: 5%;
+  display: block;
+  background-color: #ff5500;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+/* -------------- ENDANGERED ------------------- */
+
+
+
+.face .img-container{
+  width: 80%;
+  height: 80%;
+}
+.face img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.face.back{
+  background: var(--dark);
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.animal:hover .face.back{
+  transform: perspective(1000px) rotateY(360deg);
+}
+
+.animal:hover .face.front{
+  transform: perspective(1000px) rotateY(180deg);
+}
+
+.animal h1{
+  font-size: 4em;
+  font-family: 'Poppins';
+  text-align: center;
+  width: 80%;
+  color: var(--gold);
+  transform: perspective(1000px) translateZ(4rem);
+}
+
+
+
+
+
+.animals .layout .donate{
+  grid-row: 3 / span 5;
+  background: url('./donate_bg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins';
+  padding: 2em 1em;
+}
+
+.donate .title{
+  margin-left: 35%;
+  font-family: 'Teko';
+  font-size: 5em;
+  font-weight: bold;
+  display: block;
+  margin: 10;
+}
+.donate .text{
+  margin-left: 10%;
+  margin: 5;
+}
+
+.donate .amounts{
+  margin-left: 25%;
+  margin: 5;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.donate .amounts input{
+  color: var(--dark);
+}
+
+.donate .buttons{
+  margin-left: 35%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  margin: 5;
+}
+
+.donate .donate-btn{
+  background-color: var(--gold);
+  color: rgb(10, 9, 9);
+  font-family: 'Teko';
+  font-size: 1.5em;
+  padding: 5px 30px;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  margin-right: 1em;
+  background-color: rgb(247, 89, 15);
+  color: var(--dark-gray);
+}
+
+.donate-btn:hover{
+  background: rgb(40, 230, 93);
+}
+
+.donate .custom-amount-btn{
+  background-color: rgb(247, 89, 15);
+  color: var(--dark-gray);
+}
+.custom-amount-btn:hover{
+  background: rgb(40, 230, 93);
+}
+.home-items a:hover{
+  color: var(--gold);
+}
+.newsletter{
+  text-decoration: none;
+  padding: 0px;
+  font-size: 30px;
+  text-align: center;
+  margin: 1.5em 0;
+}
+.email-input{
+  width: 450px;
+  max-width: 100%;
+  color: black;
+  text-align: left;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 0px;
+  padding: 10px 0px 10px 20px;
+  font-size: 15px;
+}
+.email-input:focus, .email-input:hover{
+  outline: 0px;
+}
+.subscribe-btn{
+  border: 0px;
+  width: 150px;
+  max-width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(242, 121, 61);
+  cursor: pointer;
+  border-radius: 5px;
+  outline: 0;
+  transition: all .3s;
+}
+.subscribe-btn:hover{
+  background: rgb(125, 220, 30);
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.socials {
+  display: flex;   
+}
+.socials ul{
+  padding: 10px 10px;
+  display: flex;
+  margin: auto;
+}
+
+.socials ul li{
+  margin: 10px;
+}
+.socials a{
+  padding: 0 5px;
+  font-size: 2em;
+  width: 60px;
+  height: 60px;
+}
+.socials i:hover{
+  color: var(--gold);
+  transition: 300ms ease;
+}

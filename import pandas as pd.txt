@@ -1,0 +1,67 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.feature_selection import SelectKBest
+from sklearn.decomposition import PCA
+from sklearn.ensemble import VotingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.tree import DecisionTreeClassifier
+
+# Load data
+data = pd.read_csv("labeled_data.csv")  # Replace "labeled_data.csv" with your file name
+X = data.drop(columns=['target_column'])  # Replace 'target_column' with your target column name
+y = data['target_column']
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Construct pipeline
+pipe = Pipeline([
+    ('scaler', StandardScaler()),
+    ('feature_selection', SelectKBest()),
+    ('dimension_reduction', PCA()),
+    ('clf', VotingClassifier(estimators=[
+        ('lr', LogisticRegression()),
+        ('svm', SVC()),
+        ('rf', RandomForestClassifier()),
+        ('lda', LinearDiscriminantAnalysis()),
+        ('knn', KNeighborsClassifier()),
+        ('nb', GaussianNB()),
+        ('dt', DecisionTreeClassifier())
+    ], voting='hard'))
+])
+
+# Define parameter grid for grid search
+param_grid = {
+    'feature_selection__k': [5, 10, 15],  # Number of features to select
+    'dimension_reduction__n_components': [5, 10, 15],  # Number of PCA components
+    'clf__lr__C': [0.1, 1, 10],  # Regularization parameter for Logistic Regression
+    'clf__svm__C': [0.1, 1, 10],  # Regularization parameter for SVM
+    'clf__rf__n_estimators': [50, 100, 200],  # Number of trees for Random Forest
+    # Add other hyperparameters for other models as needed
+}
+
+# Perform grid search
+grid_search = GridSearchCV(pipe, param_grid, cv=5, n_jobs=-1)
+grid_search.fit(X_train, y_train)
+
+# Best model
+best_model = grid_search.best_estimator_
+
+# Cross-validation
+cv_scores = cross_val_score(best_model, X_train, y_train, cv=5)
+print("Cross-validation scores:", cv_scores)
+print("Mean cross-validation score:", cv_scores.mean())
+
+# Evaluate on test set
+test_score = best_model.score(X_test, y_test)
+print("Test set score:", test_score)
+
+# Make predictions
+predictions = best_model.predict(X_test)
